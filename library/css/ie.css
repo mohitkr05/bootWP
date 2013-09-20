@@ -419,7 +419,8 @@ NAVIGATION STYLES
       border: 1px solid #ccc;
       border-top: 0;
       position: absolute;
-      display: none;
+      overflow: hidden;
+      visibility: hidden;
       z-index: 8999;
       /* highlight sub-menu current page */ }
       .nav li ul.sub-menu li,
@@ -441,7 +442,8 @@ NAVIGATION STYLES
           border-bottom: 0; }
     .nav li:hover ul {
       top: auto;
-      display: block; }
+      overflow: visible;
+      visibility:visible; }
 
 /* end .nav */
 /*********************
