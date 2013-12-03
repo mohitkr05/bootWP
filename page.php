@@ -2,40 +2,41 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap clearfix">
+				<div id="inner-content" class="wrap cf">
 
-						<div id="main" class="eightcol first clearfix" role="main">
+						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 								<header class="article-header">
 
 									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-									<p class="byline vcard"><?php
-										printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( __( 'F jS, Y', 'bonestheme' ) ), bones_get_the_author_posts_link());
-									?></p>
 
+									<p class="byline vcard">
+										<?php printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
+									</p>
 
-								</header> <!-- end article header -->
+								</header> <?php // end article header ?>
 
-								<section class="entry-content clearfix" itemprop="articleBody">
+								<section class="entry-content cf" itemprop="articleBody">
 									<?php the_content(); ?>
-							</section> <!-- end article section -->
+							</section> <?php // end article section ?>
 
 								<footer class="article-footer">
-									<?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
 
-								</footer> <!-- end article footer -->
+                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
+
+								</footer> <?php // end article footer ?>
 
 								<?php comments_template(); ?>
 
-							</article> <!-- end article -->
+							</article> <?php // end article ?>
 
 							<?php endwhile; else : ?>
 
-									<article id="post-not-found" class="hentry clearfix">
+									<article id="post-not-found" class="hentry cf">
 										<header class="article-header">
 											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 										</header>
@@ -49,12 +50,12 @@
 
 							<?php endif; ?>
 
-						</div> <!-- end #main -->
+						</div> <?php // end #main ?>
 
 						<?php get_sidebar(); ?>
 
-				</div> <!-- end #inner-content -->
+				</div> <?php // end #inner-content ?>
 
-			</div> <!-- end #content -->
+			</div> <?php // end #content ?>
 
 <?php get_footer(); ?>
