@@ -404,6 +404,16 @@ We can break them up as much as we want or just keep them all in one.
 I mean, you can do whatever you want. The world is your oyster. Unless
 you hate oysters, then the world is your peanut butter & jelly sandwich.
 *********************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Alert Styles
+
+If you want to use these alerts in your design, you can. If not,
+you can just remove this stylesheet.
+
+******************************************************************/
 .alert-help, .alert-info, .alert-error, .alert-success { margin: 10px; padding: 5px 18px; border: 1px solid; }
 
 .alert-help { border-color: #e8dc59; background: #ebe16f; }
