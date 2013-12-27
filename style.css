@@ -30,6 +30,7 @@ DON'T DISMISS IT JUST YET THOUGH, USING Sass ISN'T AS COMPLICATED AS YOU THINK.
 It does take a few minutes to wrap your head around, but it will all
 be worth it. Need a quick intro? Here are a few quick reads:
 
+http://simplebits.com/notebook/2013/11/13/sass-book/ (BUY THIS)
 http://cognition.happycog.com/article/preprocess-this
 http://viget.com/inspire/sass-a-designers-perspective
 http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/
@@ -54,20 +55,42 @@ way you can keep your production files easy to read and your
 CSS minified and speedy. Simply set the output to the
 library/css folder and you are all set. It's a thing of beauty.
 
+You can also setup auto compiling with Grunt or using Terminal on
+OSX. It's a bit complicated to setup so if you aren't familiar
+with it, just get one of the automated applications.
+
 ---------------------------------------------------------------
 
 Remember, once you download Bones it's up to you how to use it,
 so go nuts. Set things up and develop in a way that's easiest for
-you. If using Sass is still a bit confusing for you, then remove them
+you. If using Sass is still a bit confusing for you, then remove it
 and customize this template as you see fit.
 
-If you're frustrated with this new direction and don't like change,
+If you're a bit uneasy about using Sass or just want a familiar setup,
 take a few minutes and think about how much better a developer you
 can become by just TRYING out new technologies. It may be tough at
 first but it WILL make you a better developer. TRUST ME ON THIS. Give
 it a week, maybe two, and you will never go back.
 
+If you STILL can't get on board and want to jump ship, that's cool.
+Bones is not for everyone and that's ok, I mean I'm not hurt by it,
+whatever, I never liked you anyway. Here are some other alternatives
+if you're looking for a blank starter theme. I'll just be here waiting
+by the window, in case you ever decide to come back.
+
+http://roots.io/starter-theme (way more complex but has a ton of cool features)
+http://html5reset.org (super clean and great markup)
+https://github.com/viewportindustries/starkers (not sure if it's still active, but still good)
+
+That's it. It's time to jump in and get your hands dirty.
+Seriously, why are you still reading this? Get to work!
+If you have any issues or problems, you can create an issue on github
+or find me on Twitter: @eddiemachado (SHAMELESS PLUG!).
+
 Happy Developing!
+
+(When you're done, you may want to remove all this nonsense before
+passing it along to your client.)
 
 ******************************************************************/
 
