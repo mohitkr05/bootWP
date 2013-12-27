@@ -28,6 +28,8 @@ BONES CHANGE LOG & HISTORY
 - removed navigation fallbacks, because really you never use those anyway
 - removed the_author_posts_link() for a better more native function
 - moved all the extra reset stuff to normalize, I mean these styles aren't changing so it's cool
+- added wp_link_pages for people who are evil and break articles up into multiple pages
+- worked out Theme Check issues
 
 /* 1.5 update */
 - sorted out new scss structure and cleaned up files
