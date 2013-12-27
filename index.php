@@ -2,7 +2,7 @@
 
 			<div id="content" class="wrap">
 
-				<div id="inner-content" class="grid cf">
+				<div id="inner-content" class="cf">
 
 						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
 
