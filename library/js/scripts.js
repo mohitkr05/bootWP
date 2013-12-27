@@ -37,38 +37,91 @@ jQuery(document).ready(function($) {
     that works for you best.
     */
     
-    /* getting viewport width */
-    var responsive_viewport = $(window).width();
-    
-    /* if is below 481px */
-    if (responsive_viewport < 481) {
-    
-    } /* end smallest screen */
-    
-    /* if is larger than 481px */
-    if (responsive_viewport > 481) {
-        
-    } /* end larger than 481px */
-    
-    /* if is above or equal to 768px */
-    if (responsive_viewport >= 768) {
-    
+	/*
+	 * Get Viewport Dimensions
+	 * returns object with viewport dimensions to match css in width and height properties
+	 * ( source: http://andylangton.co.uk/blog/development/get-viewport-size-width-and-height-javascript )
+	 */
+	function updateViewportDimensions() {
+		var w=window,d=document,e=d.documentElement,g=d.getElementsByTagName('body')[0],x=w.innerWidth||e.clientWidth||g.clientWidth,y=w.innerHeight||e.clientHeight||g.clientHeight;
+		return {width:x,height:y}
+	}
+	var viewport = updateViewportDimensions();
+
+	/*
+	* Throttle Resize-triggered Events
+	* Wrap your actions in this function to throttle the frequency of firing them off, for better performance, esp. on mobile.
+	* ( source: http://stackoverflow.com/questions/2854407/javascript-jquery-window-resize-how-to-fire-after-the-resize-is-completed )
+	*/
+	var waitForFinalEvent = (function () {
+		var timers = {};
+		return function (callback, ms, uniqueId) {
+			if (!uniqueId) { uniqueId = "Don't call this twice without a uniqueId"; }
+			if (timers[uniqueId]) { clearTimeout (timers[uniqueId]); }
+			timers[uniqueId] = setTimeout(callback, ms);
+		};
+	})();
+	// how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.
+	var timeToWaitForLast = 100;
+
+	/*
+	 * Setup Resize-triggered Actions
+	 * These will be more resource intensive than one-off checks made at load-time
+	 */
+	/* Example, uncomment and edit as needed.
+
+	// Are we on a page where we need to do something? Create one-time flags for efficient checks.
+	// Another good thing to check for might be body.no-touch, to avoid running UI interactivity on touch devices.
+	if( typeof is_home === "undefined" ) var is_home = $('body').hasClass('home');
+
+	$(window).resize(function () {
+
+		// Test on flags and do something if needed
+		if( is_home ) { waitForFinalEvent( function() {
+	  		callMyResizeDependentFunction();
+		}, timeToWaitForLast, "your-function-identifier-string"); }
+	});
+
+	// Example function
+	function callMyResizeDependentFunction() {
+		viewport = updateViewportDimensions();
+	  	if( viewport.width >= 768 ) {
+			console.log('On home page and window sized to 768 width or more.');
+	  	} else {
+			console.log('Not on home page, or window sized to less than 768.');
+	  	}
+	}
+  	callMyResizeDependentFunction(); // initial page load call
+	*/
+
+	/*
+	* Resize-unaware responsive scripts
+	*/
+
+	/* if is below 481px */
+	if (viewport.width < 481) {
+	} /* end smallest screen */
+
+	/* if is larger than 481px */
+	if (viewport.width > 481) {
+	} /* end larger than 481px */
+
+	/* if is above or equal to 768px */
+	if (viewport.width >= 768) {
+
         /* load gravatars */
         $('.comment img[data-gravatar]').each(function(){
             $(this).attr('src',$(this).attr('data-gravatar'));
         });
-        
-    }
-    
-    /* off the bat large screen actions */
-    if (responsive_viewport > 1030) {
-        
-    }
-    
-	
-	// add all your scripts here
-	
- 
+	}
+
+	/* off the bat large screen actions */
+	if (viewport.width > 1030) {
+	}
+
+	// add your scripts below this line
+
+
 }); /* end of as page load scripts */
 
 
