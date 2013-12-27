@@ -20,14 +20,14 @@ understand (what's inside the media queries). We also need to
 import the mixins file so SASS can understand the variables.
 ******************************************************************/
 
-@import "variables"; // import variables
-@import "mixins"; // import mixins
-@import "ie_grid"; // import grid
+@import "partials/variables"; // import variables
+@import "partials/mixins"; // import mixins
+@import "partials/ie_grid"; // import grid
 
 // import everything inside media queries
-@import "481up";
-@import "768up";
-@import "1030up";
+@import "breakpoints/481up";
+@import "breakpoints/768up";
+@import "breakpoints/1030up";
 
 /*
 you can call the larger styles if you want, but there's really no need
