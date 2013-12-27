@@ -8,9 +8,6 @@ in the functions.php file.
 Developed by: Eddie Machado
 URL: http://themble.com/bones/
 
-
-
-
   - head cleanup (remove rsd, uri links, junk css, ect)
   - enqueueing scripts & styles
   - theme support functions
