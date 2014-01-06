@@ -15,7 +15,7 @@ require_once( 'library/bones.php' );
 require_once( 'library/custom-post-type.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
-// require_once get_template_directory() . 'library/admin.php';
+// require_once( 'library/admin.php' );
 
 /*********************
 LAUNCH BONES
