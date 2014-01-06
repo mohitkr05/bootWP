@@ -66,7 +66,7 @@
         			'link_before' => '',                            // before each link
         			'link_after' => '',                             // after each link
         			'depth' => 0,                                   // limit the depth of the nav
-    					'fallback_cb' => 'bones_main_nav_fallback'      // fallback function
+    					'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
 
 					</nav>
