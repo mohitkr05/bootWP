@@ -25,12 +25,6 @@ over your project's layout.
 ******************************************************************/
 
 
-// each column has these styles
-%grid-col {
-  float: left;
-  padding-right: 0.75em;
-}
-
 .last-col {
   float: right;
   padding-right: 0;
@@ -44,6 +38,14 @@ There are four types, but you can add or customize
 them however you see fit.
 */
 @media (max-width: 767px) {
+
+  /*
+   *establishing the extend within each breakpoint
+  */
+  %grid-col {
+    float: left;
+    padding-right: 0.75em;
+  }
 
   .m-all {
     @extend %grid-col;
@@ -80,6 +82,14 @@ them however you see fit.
 
 /* Portrait tablet to landscape */
 @media (min-width: 768px) and (max-width: 1029px) {
+
+  /*
+   *establishing the extend within each breakpoint
+  */
+  %grid-col {
+    float: left;
+    padding-right: 0.75em;
+  }
 
   .t-all {
     @extend %grid-col;
@@ -135,6 +145,14 @@ them however you see fit.
 
 /* Landscape to small desktop */
 @media (min-width: 1030px) {
+
+  /*
+   *establishing the extend within each breakpoint
+  */
+  %grid-col {
+    float: left;
+    padding-right: 0.75em;
+  }
 
   .d-all  {
     @extend %grid-col;
