@@ -7,6 +7,9 @@
  *
  * For Example, if your custom post type is "register_post_type( 'bookmarks')",
  * then your single template should be single-bookmarks.php
+ * 
+ * Be aware that you should rename 'custom_cat' and 'custom_tag' to the appropiate custom
+ * category and taxonomy slugs, or this template will not finish to load properly.
  *
  * For more info: http://codex.wordpress.org/Post_Type_Templates
 */
@@ -59,7 +62,7 @@
 									?>
 								</section> <!-- end article section -->
 
-								<footer class="article-header">
+								<footer class="article-footer">
 									<p class="tags"><?php echo get_the_term_list( get_the_ID(), 'custom_tag', '<span class="tags-title">' . __( 'Custom Tags:', 'bonestheme' ) . '</span> ', ', ' ) ?></p>
 
 								</footer> <!-- end article footer -->
