@@ -245,7 +245,7 @@ function bones_related_posts() {
             <?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'bonestheme' ) . '</li>'; ?>
 		<?php }
 	}
-	wp_reset_query();
+	wp_reset_postdata();
 	echo '</ul>';
 } /* end bones related posts function */
 
