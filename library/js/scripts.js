@@ -111,12 +111,12 @@ var timeToWaitForLast = 100;
 */
 function loadGravatars() {
   // set the viewport using the function above
-	viewport = updateViewportDimensions();
+  viewport = updateViewportDimensions();
   // if the viewport is tablet or larger, we load in the gravatars
-	if (viewport.width >= 768) {
-		$('.comment img[data-gravatar]').each(function(){
-      jQuery(this).attr('src',$(this).attr('data-gravatar'));
-    });
+  if (viewport.width >= 768) {
+  jQuery('.comment img[data-gravatar]').each(function(){
+    jQuery(this).attr('src',$(this).attr('data-gravatar'));
+  });
 	}
 } // end function
 
