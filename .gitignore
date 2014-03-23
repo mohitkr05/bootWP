@@ -53,3 +53,7 @@ temp/
 .Trashes
 
 .svn
+
+*.codekit
+
+*.scssc
