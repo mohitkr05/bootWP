@@ -17,10 +17,11 @@ GENERAL STYLES
 
 body {
 	font-family: $lato;
-	font-size: 100%;
+  font-size: $baseFontSize / 16 * 100%;
 	line-height: 1.5;
 	color: $text-color;
 	background-color: $gray;
+  -webkit-font-smoothing: antialiased;
 }
 
 /********************
@@ -106,6 +107,9 @@ H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  margin: $leading 0 0;
+  font-family: $lato;
+  line-height: $leading;
 	text-rendering: optimizelegibility;
 	font-weight: 500;
 	/*
@@ -120,30 +124,27 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size: 2.5em;
-	line-height: 1.333em;
+  font-size: 3 * $scale * 1rem;
+  line-height: 3 * $leading;
+  margin-top: 2 * $leading;
 }
 
 h2, .h2 {
-	font-size: 1.75em;
-	line-height: 1.4em;
-	margin-bottom: 0.375em;
+  font-size: 2 * $scale * 1rem;
+  line-height: 2 * $leading;
+  margin-top: 2 * $leading;
 }
 
 h3, .h3 {
-	font-size: 1.125em;
+	font-size: 1 * $scale * 1rem;
 }
 
 h4, .h4 {
-	font-size: 1.1em;
-	font-weight: 700;
+	font-size: $scale / 2 * 1rem;
 }
 
 h5, .h5 {
-	font-size: 0.846em;
-	line-height: 2.09em;
-	text-transform: uppercase;
-	letter-spacing: 2px;
+	font-size: $scale / 3 * 1rem;
 }
 
 /*********************
@@ -310,18 +311,26 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
-			padding: 1.5em 1.5em 0;
+			padding: $leading 0;
 
 			p {
-				margin: 0 0 1.5em;
+				margin: 0 0 $leading;
 			}
 
 
 			ul, ol, table, dl {}
 
 			ul, ol {
+				margin: $leading 0;
 
-				li {}
+				li {
+					line-height: $leading;
+				}
+
+				ul, ol {
+			    margin-top: 0;
+    			margin-bottom: 0;
+				}
 
 			}
 
@@ -340,7 +349,7 @@ POSTS & CONTENT STYLES
 			table {
 				width: 100%;
 				border: 1px solid $gray;
-				margin-bottom: 1.5em;
+  			margin-top: $leading;
 
 				caption {
 					margin: 0 0 7px;
@@ -349,6 +358,11 @@ POSTS & CONTENT STYLES
 					text-transform: uppercase;
 					letter-spacing: 1px;
 				}
+
+				td, th {
+    			padding: 0;
+    			line-height: $baseLineHeight * $baseFontSize - 0px;
+  			}
 			}
 
 			tr {
@@ -360,7 +374,6 @@ POSTS & CONTENT STYLES
 			}
 
 			td {
-				padding: 7px;
 				border-right: 1px solid $gray;
 
 				&:last-child {
@@ -379,6 +392,8 @@ POSTS & CONTENT STYLES
 			}
 
 			blockquote {
+  			line-height: $leading;
+  			margin-top: $leading 0;
 				margin: 0 0 1.5em 0.75em;
 				padding: 0 0 0 0.75em;
 				border-left: 3px solid $blue;
@@ -432,6 +447,7 @@ POSTS & CONTENT STYLES
 				padding: 1.5em;
 				margin: 0 0 1.5em;
 				border-radius: 3px;
+				vertical-align: bottom;
 			}
 
 		} /* end .entry-content */
