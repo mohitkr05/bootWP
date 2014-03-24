@@ -18,20 +18,20 @@
 									?></p>
 
 
-								</header> <!-- end article header -->
+								</header>
 
 								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php the_content(); ?>
-							</section> <!-- end article section -->
+							</section>
 
 								<footer class="article-footer">
 									<?php the_tags( '<span class="tags">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?>
 
-								</footer> <!-- end article footer -->
+								</footer>
 
 								<?php comments_template(); ?>
 
-							</article> <!-- end article -->
+							</article>
 
 							<?php endwhile; else : ?>
 
@@ -49,12 +49,12 @@
 
 							<?php endif; ?>
 
-						</div> <!-- end #main -->
+						</div>
 
 						<?php get_sidebar(); ?>
 
-				</div> <!-- end #inner-content -->
+				</div>
 
-			</div> <!-- end #content -->
+			</div>
 
 <?php get_footer(); ?>
