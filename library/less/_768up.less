@@ -42,7 +42,9 @@ NAVIGATION STYLES
 .nav {
 	background: #eee;
 	border: 0;
-
+	ul {
+		margin-top:0;
+	}
 	li {
 		float: left;
 		position: relative;
@@ -56,7 +58,6 @@ NAVIGATION STYLES
 			*/
 			&:hover, &:focus {
 				background-color: #dedede;
-
 			}
 		}
 
@@ -72,7 +73,8 @@ NAVIGATION STYLES
 			border: 1px solid #ccc;
 			border-top: 0;
 			position: absolute;
-			display: none;
+			overflow: hidden;
+			visibility: hidden;
 			z-index: 8999;
 
 			li {
@@ -110,7 +112,7 @@ NAVIGATION STYLES
 			/* highlight sub-menu current page */
 			li.current-menu-item,
 			li.current_page_item,
-			li.current-page-ancestor {
+			li.current_page_ancestor {
 				a {}
 			}
 		}
@@ -118,7 +120,8 @@ NAVIGATION STYLES
 		/* showing sub-menus */
 		&:hover ul {
 			top: auto;
-			display: block;
+			overflow: visible;
+			visibility:visible;
 		}
 
 	} /* end .menu ul li */
@@ -126,7 +129,7 @@ NAVIGATION STYLES
 	/* highlight current page */
 	li.current-menu-item,
 	li.current_page_item,
-	li.current-page-ancestor {
+	li.current_page_ancestor {
 		a {}
 	}  /* end current highlighters */
 
