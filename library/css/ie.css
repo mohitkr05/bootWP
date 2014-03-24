@@ -264,6 +264,7 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
+<<<<<<< HEAD
 .nav { background: #eee; border: 0; /* end .menu ul li */ /* highlight current page */ /* end current highlighters */ }
 .nav li { float: left; position: relative; /*
 plan your menus and drop-downs wisely.
@@ -282,6 +283,60 @@ for usability. k, bai.
 .nav li ul.sub-menu li a, .nav li ul.children li a { padding-left: 10px; border-right: 0; display: block; width: 180px; border-bottom: 1px solid #ccc; }
 .nav li ul.sub-menu li:last-child a, .nav li ul.children li:last-child a { border-bottom: 0; }
 .nav li:hover ul { top: auto; display: block; }
+=======
+.nav {
+  background: #eee;
+  border: 0;
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */ }
+  .nav li {
+    float: left;
+    position: relative;
+    /*
+    plan your menus and drop-downs wisely.
+    */
+    /* showing sub-menus */ }
+    .nav li a {
+      border-bottom: 0;
+      /*
+      you can use hover styles here even though this size
+      has the possibility of being a mobile device.
+      */ }
+      .nav li a:hover, .nav li a:focus {
+        background-color: #dedede; }
+    .nav li ul.sub-menu,
+    .nav li ul.children {
+      margin-top: 0;
+      border: 1px solid #ccc;
+      border-top: 0;
+      position: absolute;
+      overflow: hidden;
+      visibility: hidden;
+      z-index: 8999;
+      /* highlight sub-menu current page */ }
+      .nav li ul.sub-menu li,
+      .nav li ul.children li {
+        /*
+        if you need to go deeper, go nuts
+        just remember deeper menus suck
+        for usability. k, bai.
+        */ }
+        .nav li ul.sub-menu li a,
+        .nav li ul.children li a {
+          padding-left: 10px;
+          border-right: 0;
+          display: block;
+          width: 180px;
+          border-bottom: 1px solid #ccc; }
+        .nav li ul.sub-menu li:last-child a,
+        .nav li ul.children li:last-child a {
+          border-bottom: 0; }
+    .nav li:hover ul {
+      top: auto;
+      overflow: visible;
+      visibility:visible; }
+>>>>>>> FETCH_HEAD
 
 /* end .nav */
 /*********************

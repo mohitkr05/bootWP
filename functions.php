@@ -50,6 +50,7 @@ require_once( 'library/custom-post-type.php' ); // you can disable this if you l
 // Thumbnail sizes
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
+
 /*
 to add more sizes, simply copy a line from above
 and change the dimensions & name. As long as you
@@ -68,6 +69,23 @@ for the 600 x 100 image:
 
 You can change the names and dimensions to whatever
 you like. Enjoy!
+*/
+
+add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
+
+function bones_custom_image_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'bones-thumb-600' => __('600px by 150px'),
+        'bones-thumb-300' => __('300px by 100px'),
+    ) );
+}
+
+/*
+The function above adds the ability to use the dropdown menu to select 
+the new images sizes you have just created from within the media manager 
+when you add media to your content blocks. If you add more image sizes, 
+duplicate one of the lines in the array and name it according to your 
+new image size.
 */
 
 /************* ACTIVE SIDEBARS ********************/
@@ -124,13 +142,13 @@ function bones_comments( $comment, $args, $depth ) {
 					echo get_avatar($comment,$size='32',$default='<path_to_url>' );
 				*/
 				?>
-				<!-- custom gravatar call -->
+				<?php // custom gravatar call ?>
 				<?php
 					// create variable
 					$bgauthemail = get_comment_author_email();
 				?>
 				<img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=32" class="load-gravatar avatar avatar-48 photo" height="32" width="32" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
-				<!-- end custom gravatar call -->
+				<?php // end custom gravatar call ?>
 				<?php printf(__( '<cite class="fn">%s</cite>', 'bonestheme' ), get_comment_author_link()) ?>
 				<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'bonestheme' )); ?> </a></time>
 				<?php edit_comment_link(__( '(Edit)', 'bonestheme' ),'  ','') ?>
@@ -145,7 +163,7 @@ function bones_comments( $comment, $args, $depth ) {
 			</section>
 			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 		</article>
-	<!-- </li> is added by WordPress automatically -->
+	<?php // </li> is added by WordPress automatically ?>
 <?php
 } // don't remove this bracket!
 
