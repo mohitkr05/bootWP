@@ -49,6 +49,7 @@ them however you see fit.
   .m-all {
     @include grid-col;
     width: 100%;
+    padding-right: 0;
   }
 
   .m-1of2 {
@@ -85,6 +86,7 @@ them however you see fit.
   .t-all {
     @include grid-col;
     width: 100%;
+    padding-right: 0;
   }
 
   .t-1of2 {
@@ -140,6 +142,7 @@ them however you see fit.
   .d-all  {
     @include grid-col;
     width: 100%;
+    padding-right: 0;
   }
 
   .d-1of2 {
