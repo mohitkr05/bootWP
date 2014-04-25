@@ -201,6 +201,7 @@ NAVIGATION STYLES
   /* highlight current page */
   /* end current highlighters */ }
   .nav ul {
+    background:#323944;
     margin-top: 0; }
   .nav li {
     float: left;
@@ -224,7 +225,6 @@ NAVIGATION STYLES
       border: 1px solid #ccc;
       border-top: 0;
       position: absolute;
-      overflow: hidden;
       visibility: hidden;
       z-index: 8999;
       /* highlight sub-menu current page */ }
@@ -245,9 +245,13 @@ NAVIGATION STYLES
         .nav li ul.sub-menu li:last-child a,
         .nav li ul.children li:last-child a {
           border-bottom: 0; }
-    .nav li:hover ul {
+        .nav li ul.sub-menu li ul,
+        .nav li ul.children li ul {
+          top: 0;
+          left: 100%;
+        }
+    .nav li:hover > ul {
       top: auto;
-      overflow: visible;
       visibility: visible; }
 
 /* end .nav */
