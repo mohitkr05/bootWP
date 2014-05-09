@@ -42,6 +42,7 @@ NAVIGATION STYLES
 .nav {
 	border: 0;
 	ul {
+		background:$black;
 		margin-top:0;
 	}
 	li {
@@ -73,7 +74,6 @@ NAVIGATION STYLES
 			border: 1px solid #ccc;
 			border-top: 0;
 			position: absolute;
-			overflow: hidden;
 			visibility: hidden;
 			z-index: 8999;
 
@@ -106,7 +106,10 @@ NAVIGATION STYLES
 				just remember deeper menus suck
 				for usability. k, bai.
 				*/
-				ul {}
+				ul {
+					top:0;
+					left:100%;
+				}
 			}
 
 			/* highlight sub-menu current page */
@@ -118,9 +121,8 @@ NAVIGATION STYLES
 		}
 
 		/* showing sub-menus */
-		&:hover ul {
+		&:hover > ul {
 			top: auto;
-			overflow: visible;
 			visibility:visible;
 		}
 
