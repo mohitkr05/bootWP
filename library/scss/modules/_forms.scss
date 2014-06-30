@@ -101,6 +101,11 @@ textarea,
 
 } // end input defaults
 
+// spacing out the password (thx @murtaugh)
+input[type="password"] {
+  letter-spacing: 0.3em;
+}
+
 // textareas
 textarea {
   max-width: 100%;
