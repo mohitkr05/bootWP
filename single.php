@@ -12,7 +12,7 @@
 								/*
 								 * Ah, post formats. Nature's greatest mystery (aside from the sloth).
 								 *
-								 * So this function will bting in the needed template file depending on what the post
+								 * So this function will bring in the needed template file depending on what the post
 								 * format is. The different post formats are located in the post-formats folder.
 								 *
 								 *
