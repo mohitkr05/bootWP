@@ -1,4 +1,4 @@
-## BONES CHANGE LOG & HISTORY
+# BONES CHANGE LOG & HISTORY
 
 This theme is meant to make development easier & take
 advantage of modern web development & design techniques.
@@ -9,6 +9,10 @@ http://themble.com/bones/
 Author: Eddie Machado
 
 *******************************************************************
+
+/* 1.71 update */
+- added spacing to the password fields (thx @murtaugh)
+
 
 /* 1.(I've lost track so I'm starting at)7 update */
 - reworked Sass files and broke them into partials
