@@ -12,6 +12,8 @@ Author: Eddie Machado
 
 /* 1.71 update */
 - added spacing to the password fields (thx @murtaugh)
+- fixed calc percentage function
+- removed chrome frame support
 
 
 /* 1.(I've lost track so I'm starting at)7 update */
