@@ -640,7 +640,7 @@ over your project's layout.
 ******************************************************************/
 .last-col {
   float: right;
-  padding-right: 0; }
+  padding-right: 0 !important; }
 
 /*
 Mobile Grid Styles
@@ -652,7 +652,8 @@ them however you see fit.
   .m-all {
     float: left;
     padding-right: 0.75em;
-    width: 100%; }
+    width: 100%;
+    padding-right: 0; }
 
   .m-1of2 {
     float: left;
@@ -683,7 +684,8 @@ them however you see fit.
   .t-all {
     float: left;
     padding-right: 0.75em;
-    width: 100%; }
+    width: 100%;
+    padding-right: 0; }
 
   .t-1of2 {
     float: left;
@@ -734,7 +736,8 @@ them however you see fit.
   .d-all {
     float: left;
     padding-right: 0.75em;
-    width: 100%; }
+    width: 100%;
+    padding-right: 0; }
 
   .d-1of2 {
     float: left;
@@ -1206,6 +1209,9 @@ textarea,
     .field.is-disabled:focus,
     .field.is-disabled:active {
       background-color: #d5edf8; }
+
+input[type="password"] {
+  letter-spacing: 0.3em; }
 
 textarea {
   max-width: 100%;
@@ -1862,6 +1868,7 @@ you can add resource intensive styles.
     /* highlight current page */
     /* end current highlighters */ }
     .nav ul {
+      background: #323944;
       margin-top: 0; }
     .nav li {
       float: left;
@@ -1885,7 +1892,6 @@ you can add resource intensive styles.
         border: 1px solid #ccc;
         border-top: 0;
         position: absolute;
-        overflow: hidden;
         visibility: hidden;
         z-index: 8999;
         /* highlight sub-menu current page */ }
@@ -1906,9 +1912,12 @@ you can add resource intensive styles.
           .nav li ul.sub-menu li:last-child a,
           .nav li ul.children li:last-child a {
             border-bottom: 0; }
-      .nav li:hover ul {
+          .nav li ul.sub-menu li ul,
+          .nav li ul.children li ul {
+            top: 0;
+            left: 100%; }
+      .nav li:hover > ul {
         top: auto;
-        overflow: visible;
         visibility: visible; }
 
   /* end .nav */
