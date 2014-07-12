@@ -83,10 +83,10 @@ auto-cropped.
 To call a different size, simply change the text
 inside the thumbnail function.
 
-For example, to call the 300 x 300 sized image,
+For example, to call the 300 x 100 sized image,
 we would use the function:
 <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-for the 600 x 100 image:
+for the 600 x 150 image:
 <?php the_post_thumbnail( 'bones-thumb-600' ); ?>
 
 You can change the names and dimensions to whatever
