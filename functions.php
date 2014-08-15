@@ -24,6 +24,9 @@ Let's get everything up and running.
 
 function bones_ahoy() {
 
+  //Allow editor style.
+  add_editor_style();
+
   // let's get language support going, if you need it
   load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
 
