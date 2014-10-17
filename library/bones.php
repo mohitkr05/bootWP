@@ -38,8 +38,6 @@ function bones_head_cleanup() {
 	remove_action( 'wp_head', 'rsd_link' );
 	// windows live writer
 	remove_action( 'wp_head', 'wlwmanifest_link' );
-	// index link
-	remove_action( 'wp_head', 'index_rel_link' );
 	// previous link
 	remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
 	// start link
