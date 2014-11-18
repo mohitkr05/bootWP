@@ -63,10 +63,9 @@ some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
 p {
-  -ms-word-break: break-all;
-  -ms-word-wrap: break-all;
-      word-break: break-word;
-     word-break: break-word;
+  -ms-word-wrap: break-word;
+  word-break: break-word; //non-standart css for webkit
+  word-wrap: break-word;
   // cleaning up the ragged lines and breaks
   -webkit-hyphens: auto;
      -moz-hyphens: auto;
