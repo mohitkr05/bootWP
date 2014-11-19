@@ -4,7 +4,7 @@
 
 				<div id="inner-content" class="wrap cf">
 
-						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (is_category()) { ?>
 								<h1 class="archive-title h2">
@@ -88,7 +88,7 @@
 
 							<?php endif; ?>
 
-						</div>
+						</main>
 
 					<?php get_sidebar(); ?>
 
