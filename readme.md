@@ -23,8 +23,7 @@ and several other developers. :)
 #### Submit Bugs & or Fixes:
 https://github.com/eddiemachado/bones/issues
 
-To view Release & Update Notes, read the log.txt file inside
-the library folder.
+To view Release & Update Notes, read the CHANGELOG.md file in the main folder.
 
 For more news and to see why my parents constantly ask me what I'm
 doing with my life, follow me on twitter: @eddiemachado
