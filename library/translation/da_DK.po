@@ -13,13 +13,13 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n\n"
 "X-Poedit-Basepath: /home/fulgor/GIT/bones\n"
 "Last-Translator: \n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.4\n"
+"Language: da_DK\n"
 "X-Poedit-SearchPath-0: /home/fulgor/GIT/bones\n"
 
 #: comments.php:12
 msgid "This post is password protected. Enter the password to view comments."
-msgstr ""
-"Dette indlæg er kodeordsbeskyttet. Skriv kodeordet for at se kommentarer."
+msgstr "Dette indlæg er kodeordsbeskyttet. Skriv kodeordet for at se kommentarer."
 
 #: comments.php:23
 msgid "Response"
@@ -168,10 +168,8 @@ msgid "Epic 404 - Article Not Found"
 msgstr "Episk 404 - Emne Blev Ikke Fundet"
 
 #: 404.php:17
-msgid ""
-"The article you were looking for was not found, but maybe try looking again!"
-msgstr ""
-"Det emne, du ledte efter blev ikke fundet, men prøv måske at lede igen!"
+msgid "The article you were looking for was not found, but maybe try looking again!"
+msgstr "Det emne, du ledte efter blev ikke fundet, men prøv måske at lede igen!"
 
 #: search.php:7
 msgid "Search Results for:"
@@ -251,7 +249,7 @@ msgstr "Læs mere &raquo;"
 
 #: library/custom-post-type.php:24
 msgid "Custom Types"
-msgstr "Brugerdefinerede Typer:"
+msgstr "Brugerdefinerede Typer"
 
 #: library/custom-post-type.php:25
 msgid "Custom Post"
@@ -308,6 +306,10 @@ msgstr "Brugerdefineret Kategori"
 #: library/custom-post-type.php:75
 msgid "Search Custom Categories"
 msgstr "Søg Brugerdefinerede Kategorier"
+
+#: library/custom-post-type.php:33
+msgid "All Custom Posts"
+msgstr "Alle Brugerdefinerede Indlæg"
 
 #: library/custom-post-type.php:76
 msgid "All Custom Categories"
