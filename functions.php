@@ -67,7 +67,7 @@ add_action( 'after_setup_theme', 'bones_ahoy' );
 /************* OEMBED SIZE OPTIONS *************/
 
 if ( ! isset( $content_width ) ) {
-	$content_width = 640;
+	$content_width = 680;
 }
 
 /************* THUMBNAIL SIZE OPTIONS *************/
