@@ -16,8 +16,6 @@ URL: http://themble.com/bones/
   - page-navi function
   - removing <p> from around images
   - customizing the post excerpt
-  - custom google+ integration
-  - adding custom fields to user profiles
 
 */
 
