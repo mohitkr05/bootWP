@@ -244,11 +244,4 @@ function bones_fonts() {
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
-// Enable support for HTML5 markup.
-	add_theme_support( 'html5', array(
-		'comment-list',
-		'search-form',
-		'comment-form'
-	) );
-
 /* DON'T DELETE THIS CLOSING TAG */ ?>
